@@ -1,0 +1,11 @@
+#LogInContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+#button {
+  width: 215px;
+  margin-top: 25px;
+}
