@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { alpha, styled } from "@mui/material/styles";
 import { pink } from "@mui/material/colors";
 import Switch from "@mui/material/Switch";
@@ -20,7 +20,12 @@ const PinkSwitch = styled(Switch)(({ theme }) => ({
 
 const label = { inputProps: { "aria-label": "Color switch demo" } };
 
-export default function OnlineMode() {
+export default function OnlineMode(props) {
+  const { pink, setPink } = props;
+  console.log("pink", pink);
+  const handlePink = () => {
+    setPink(!pink);
+  };
   return (
     <div>
       <Card sx={{ width: "275px", minHeight: "180px" }}>
@@ -36,7 +41,7 @@ export default function OnlineMode() {
             Is this application connected to the internet?
           </Typography>
         </CardContent>
-        <PinkSwitch {...label} defaultChecked />
+        <PinkSwitch onChange={handlePink} {...label} defaultChecked />
       </Card>
     </div>
   );

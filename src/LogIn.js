@@ -6,7 +6,6 @@ import "./LogIn.css";
 
 function LogIn(props) {
   const { setIsLoggedIn } = props;
-  console.log(setIsLoggedIn);
 
   const handleLogIn = () => {
     setIsLoggedIn(true);

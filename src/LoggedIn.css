@@ -1,3 +1,11 @@
+#wrapper {
+  width: 49%;
+  margin: 0 auto;
+}
+h1 {
+  color: lightgray;
+}
+
 #boxes {
   display: flex;
   align-items: center;

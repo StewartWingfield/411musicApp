@@ -9,9 +9,8 @@ function App() {
   console.log(isLoggedIn);
   return (
     <div className="App">
-      <NavBar />
-      <LogIn setIsLoggedIn={setIsLoggedIn} />
-      <LoggedIn />
+      <NavBar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      {isLoggedIn ? <LoggedIn /> : <LogIn setIsLoggedIn={setIsLoggedIn} />}
     </div>
   );
 }

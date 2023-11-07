@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -7,12 +7,12 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-function SoundQuality() {
-  const [normal, setNormal] = useState("");
-
+function SoundQuality(props) {
+  const { quality, setQuality } = props;
   const handleChange = (event) => {
-    setNormal(event.target.value);
+    setQuality(event.target.value);
   };
+  console.log("quality", quality);
   return (
     <div>
       <Card sx={{ width: "275px", minHeight: "170px" }}>
@@ -39,16 +39,14 @@ function SoundQuality() {
           <Select
             labelId="demo-simple-select-standard-label"
             id="demo-simple-select-standard"
-            value={normal}
+            value={quality}
             onChange={handleChange}
             label="Normal"
           >
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            <MenuItem value={10}>Low</MenuItem>
-            <MenuItem value={20}>Normal</MenuItem>
-            <MenuItem value={30}>High</MenuItem>
+            <MenuItem value=""></MenuItem>
+            <MenuItem value={1}>Low</MenuItem>
+            <MenuItem value={2}>Normal</MenuItem>
+            <MenuItem value={3}>High</MenuItem>
           </Select>
         </FormControl>
       </Card>
