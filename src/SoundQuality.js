@@ -43,7 +43,6 @@ function SoundQuality(props) {
             onChange={handleChange}
             label="Normal"
           >
-            <MenuItem value=""></MenuItem>
             <MenuItem value={1}>Low</MenuItem>
             <MenuItem value={2}>Normal</MenuItem>
             <MenuItem value={3}>High</MenuItem>
