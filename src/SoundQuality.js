@@ -35,7 +35,7 @@ function SoundQuality(props) {
             minWidth: "95%",
           }}
         >
-          <InputLabel id="demo-simple-select-standard-label">Normal</InputLabel>
+          <InputLabel id="demo-simple-select-standard-label"></InputLabel>
           <Select
             labelId="demo-simple-select-standard-label"
             id="demo-simple-select-standard"
